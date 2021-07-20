@@ -6,11 +6,47 @@
 	<title>Grid Example</title>
 <style type="text/css">
 
-body
-{
-	display: grid;
-	
-}
+	body
+	{
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas: 
+		"header header header"
+		"left main right"
+		"footer footer footer";
+
+		min-height: 100vh;
+		background-color: blueviolet;
+		margin: 0;
+		padding: 0;
+	}
+
+	header
+	{
+		grid-area: header;
+		background-color: darkblue;
+	}
+	aside:first-of-type
+	{
+		grid-area: left;
+		background-color: darkcyan;
+	}
+	main
+	{
+		grid-area: main;
+		background-color: mediumvioletred;
+	}
+	aside:last-of-type
+	{
+		grid-area: right;
+		background-color: darkcyan;
+	}
+	footer
+	{
+		grid-area: footer;
+		background-color: darkblue;
+	}
 	
 </style>
 </head>
